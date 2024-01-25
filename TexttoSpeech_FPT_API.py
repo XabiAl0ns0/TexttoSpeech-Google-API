@@ -3,7 +3,7 @@ import requests
 url = 'https://api.fpt.ai/hmi/tts/v5'
 
 # Your API key from FPT
-api_key = 'bGIdjqmvvIKALDozXZiaYd2M4nMPSlQd'
+api_key = 'Please fill API key from FPT'
 
 # Text you want to convert to speech
 text_to_speech = 'xin chào, công ty phương trang buslines'
@@ -22,9 +22,9 @@ response = requests.post(url, data=payload, headers=headers)
 # Checking the response
 if response.status_code == 200:
     # If successful, you can save the audio or play it as needed
-    with open('output1.mp3', 'wb') as audio_file:
+    with open('output.mp3', 'wb') as audio_file:
         audio_file.write(response.content)
-    print('Speech conversion successful. Audio saved as output1.mp3')
+    print('Speech conversion successful. Audio saved as output.mp3')
 else:
     print(f'Error {response.status_code}: {response.text}')
 
